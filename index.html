@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container mt-3">
         <header class="display-4 bg-light text-center">
             Cadastro de Alunos
         </header>
@@ -18,6 +18,76 @@
         <section>
             <div class="display-6">
                 Formulário de Cadastro:
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <form>
+                        <div class="row mb-3 mt-3">
+                            <label for="inputName" class="col-sm-2 col-form-label">Nome: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mt-3">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email: </label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mt-3">
+                            <label for="inputTel" class="col-sm-2 col-form-label">Telefone: </label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="inputTel">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mt-3">
+                            <label for="inputCat" class="col-sm-2 col-form-label">Cursos: </label>
+                            <div class="col-sm-5">
+                                <select class="form-select" aria-label="Default select example" id="inputCat">
+                                    <option value="1" selected>Java</option>
+                                    <option value="2">MySQL</option>
+                                    <option value="3">C#</option>
+                                    <option value="4">React</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 mt-3">
+                            <label for="inputTurno" class="col-sm-2 col-form-label">Turno: </label>
+                            <div class="col-sm-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="inputTurno"
+                                        value="optManha" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Manhã
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="inputTurno"
+                                        value="optTarde">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Tarde
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="inputTurno"
+                                        value="optNoite">
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        Noite
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3 mt-3">
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <hr>
