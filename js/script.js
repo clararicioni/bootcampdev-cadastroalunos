@@ -66,7 +66,9 @@ function addNewRow(student){
 
     //Insert student name
     var nameNode = document.createTextNode(student.name);
-    newRow.insertCell().appendChild(nameNode);
+    var cell = newRow.insertCell()
+    cell.className='nome'
+    cell.appendChild(nameNode);
 
     //Insert student email
     var emailNode = document.createTextNode(student.email);
@@ -74,15 +76,20 @@ function addNewRow(student){
 
     //Insert student tel
     var telNode = document.createTextNode(student.tel);
-    newRow.insertCell().appendChild(telNode);
-
+    var cell = newRow.insertCell()
+    cell.className='d-none d-md-table-cell telefone'
+    cell.appendChild(telNode);
     //Insert student course
     var courseNode = document.createTextNode(categories[student.course - 1].name);
-    newRow.insertCell().appendChild(courseNode);
+    var cell = newRow.insertCell()
+    cell.className='d-none d-md-table-cell'
+    cell.appendChild(courseNode);
 
     //Insert student shift
     var shiftNode = document.createTextNode(shiftCategories[student.shift - 1].name);
-    newRow.insertCell().appendChild(shiftNode);
+    var cell = newRow.insertCell()
+    cell.className='d-none d-md-table-cell'
+    cell.appendChild(shiftNode);
 }
 //Telephone mask
 $(document).ready(function () {

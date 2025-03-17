@@ -9,6 +9,28 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="shortcut icon" href="assets/bookico.ico" type="image/x-icon">
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+    body {
+        font-family: "Mulish", sans-serif;
+        user-select: none;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    @media (max-width: 992px) {
+
+        .telefone,
+        .nome {
+            white-space: nowrap;
+        }
+    }
+</style>
 
 <body>
     <main class="container mt-3">
@@ -22,7 +44,7 @@
             </div>
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    <form id="studentForm" onsubmit="save(); return false;"> <!--para que o documento não seja recarregado após o submit-->
+                    <form id="studentForm" onsubmit="save(); return false;"><!--para que o documento não seja recarregado após o submit-->
                         <div class="row mb-3 mt-3">
                             <label for="inputName" class="col-sm-2 col-form-label">Nome: </label>
                             <div class="col-sm-10">
@@ -38,7 +60,7 @@
                         </div>
 
                         <div class="row mb-3 mt-3">
-                            <label for="inputTel" class="col-sm-2 col-form-label">Telefone: </label>
+                            <label for="inputPhone" class="col-sm-2 col-form-label">Telefone: </label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputPhone" required></input>
                             </div>
@@ -57,7 +79,7 @@
                         </div>
 
                         <div class="row mb-3 mt-3">
-                            <label for="inputTurno" class="col-sm-2 col-form-label">Turno: </label>
+                            <label for="turnoManha" class="col-sm-2 col-form-label">Turno: </label>
                             <div class="col-sm-5">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="exampleRadios" id="turnoManha"
@@ -100,16 +122,16 @@
                 <div class="col-md-10 offset-md-1">
                     <table class="table" id="studentsTable">
                         <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">Curso</th>
-                            <th scope="col">Turno</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col" class="d-none d-md-table-cell">Telefone</th>
+                                <th scope="col" class="d-none d-md-table-cell">Curso</th>
+                                <th scope="col" class="d-none d-md-table-cell">Turno</th>
+                            </tr>
                         </thead>
-                      </table>  
+                    </table>
                 </div>
             </div>
         </section>
@@ -121,7 +143,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>  
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/script.js"></script>
 </body>
