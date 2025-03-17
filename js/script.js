@@ -39,7 +39,22 @@ function loadStudents(){
         addNewRow(student);
     }
 }
+//save a student
+function save(){
+    var selectedShift = document.querySelector('input[name="exampleRadios"]:checked');
+    var student = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        tel: document.getElementById("inputPhone").value,
+        course: document.getElementById("inputCat").value,
+        shift: selectedShift ? parseInt(selectedShift.value) : 1
+    };
+    addNewRow(student);
+    students.push(student);
 
+    document.getElementById("studentForm").reset();
+}
 //Add new row
 function addNewRow(student){
     var table = document.getElementById("studentsTable");
@@ -71,5 +86,5 @@ function addNewRow(student){
 }
 //Telephone mask
 $(document).ready(function () {
-    $('#phone').mask('(00) 00000-0000');
+    $('#inputPhone').mask('(00) 00000-0000');
 });
