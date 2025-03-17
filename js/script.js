@@ -3,8 +3,16 @@ var students = [
         id: 1,
         name: "Pedro Antonio",
         email: "pedro@abutua.com",
-        tel: "(15) 9999-9999",
-        course: 1,
+        tel: "(15) 99999-9999",
+        course: 2,
+        shift: 1
+    },
+    {
+        id: 2,
+        name: "Claudio Antonio",
+        email: "claudio@abutua.com",
+        tel: "(15) 99999-8888",
+        course: 4,
         shift: 2
     },
 ];
@@ -54,10 +62,14 @@ function addNewRow(student){
     newRow.insertCell().appendChild(telNode);
 
     //Insert student course
-    var courseNode = document.createTextNode(categories[student.course - 1].name); //-1, pois é um array
+    var courseNode = document.createTextNode(categories[student.course - 1].name);
     newRow.insertCell().appendChild(courseNode);
 
     //Insert student shift
     var shiftNode = document.createTextNode(shiftCategories[student.shift - 1].name);
     newRow.insertCell().appendChild(shiftNode);
 }
+//Telephone mask
+$(document).ready(function () {
+    $('#phone').mask('(00) 00000-0000');
+});
